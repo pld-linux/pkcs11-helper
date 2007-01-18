@@ -5,7 +5,7 @@ Version:	1.02
 Release:	1
 License:	GPL v2 or BSD
 Group:		Libraries
-Source0:	http://www.opensc-project.org/pkcs11-helper/%{name}-%{version}.tar.bz2
+Source0:	http://www.opensc-project.org/files/pkcs11-helper/%{name}-%{version}.tar.bz2
 # Source0-md5:	db8a23bee8fb31f0f3a23666f0a6e057
 URL:		http://www.opensc-project.org/
 BuildRequires:	doxygen
