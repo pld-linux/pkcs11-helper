@@ -1,5 +1,5 @@
 Summary:	Helper library for the use with smart cards and the PKCS#11 API
-Summary(pl):	Biblioteka pomocnicza do u¿ywania z kartami procesorowymi i API PKCS#11
+Summary(pl.UTF-8):   Biblioteka pomocnicza do uÅ¼ywania z kartami procesorowymi i API PKCS#11
 Name:		pkcs11-helper
 Version:	1.02
 Release:	1
@@ -16,31 +16,31 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 pkcs11-helper provides a simple API to access PKCS#11 tokens.
 
-%description -l pl
-pkcs11-helper udostêpnia proste API do dostêpu do tokenów PKCS#11.
+%description -l pl.UTF-8
+pkcs11-helper udostÄ™pnia proste API do dostÄ™pu do tokenÃ³w PKCS#11.
 
 %package devel
 Summary:	Header files for pkcs11-helper library
-Summary(pl):	Pliki nag³ówkowe biblioteki pkcs11-helper
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki pkcs11-helper
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for pkcs11-helper library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki pkcs11-helper.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki pkcs11-helper.
 
 %package static
 Summary:	Static pkcs11-helper library
-Summary(pl):	Statyczna biblioteka pkcs11-helper
+Summary(pl.UTF-8):   Statyczna biblioteka pkcs11-helper
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static pkcs11-helper library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka pkcs11-helper.
 
 %prep
