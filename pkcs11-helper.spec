@@ -1,5 +1,5 @@
 Summary:	Helper library for the use with smart cards and the PKCS#11 API
-Summary(pl.UTF-8):   Biblioteka pomocnicza do używania z kartami procesorowymi i API PKCS#11
+Summary(pl.UTF-8):	Biblioteka pomocnicza do używania z kartami procesorowymi i API PKCS#11
 Name:		pkcs11-helper
 Version:	1.02
 Release:	1
@@ -21,7 +21,7 @@ pkcs11-helper udostępnia proste API do dostępu do tokenów PKCS#11.
 
 %package devel
 Summary:	Header files for pkcs11-helper library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki pkcs11-helper
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki pkcs11-helper
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -33,7 +33,7 @@ Pliki nagłówkowe biblioteki pkcs11-helper.
 
 %package static
 Summary:	Static pkcs11-helper library
-Summary(pl.UTF-8):   Statyczna biblioteka pkcs11-helper
+Summary(pl.UTF-8):	Statyczna biblioteka pkcs11-helper
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
