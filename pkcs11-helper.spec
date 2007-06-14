@@ -1,12 +1,12 @@
 Summary:	Helper library for the use with smart cards and the PKCS#11 API
 Summary(pl.UTF-8):	Biblioteka pomocnicza do używania z kartami procesorowymi i API PKCS#11
 Name:		pkcs11-helper
-Version:	1.02
+Version:	1.03
 Release:	1
 License:	GPL v2 or BSD
 Group:		Libraries
 Source0:	http://www.opensc-project.org/files/pkcs11-helper/%{name}-%{version}.tar.bz2
-# Source0-md5:	db8a23bee8fb31f0f3a23666f0a6e057
+# Source0-md5:	4ca477f320388097e0a496779eb1a07f
 URL:		http://www.opensc-project.org/
 BuildRequires:	doxygen
 BuildRequires:	openssl-devel >= 0.9.7a
@@ -58,6 +58,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+rm -rf $RPM_BUILD_ROOT%{_docdir}/%{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -68,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING COPYING.BSD ChangeLog README THANKS
 %attr(755,root,root) %{_libdir}/libpkcs11-helper.so.*.*.*
-%{_mandir}/man8/pkcs11-helper.8*
+%{_mandir}/man8/pkcs11-helper-1.8*
 
 %files devel
 %defattr(644,root,root,755)
