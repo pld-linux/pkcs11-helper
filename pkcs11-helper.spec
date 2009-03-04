@@ -1,12 +1,12 @@
 Summary:	Helper library for the use with smart cards and the PKCS#11 API
 Summary(pl.UTF-8):	Biblioteka pomocnicza do używania z kartami procesorowymi i API PKCS#11
 Name:		pkcs11-helper
-Version:	1.06
+Version:	1.07
 Release:	1
 License:	GPL v2 or BSD
 Group:		Libraries
 Source0:	http://www.opensc-project.org/files/pkcs11-helper/%{name}-%{version}.tar.bz2
-# Source0-md5:	2e4ee677a93832174db4dbbc93f94700
+# Source0-md5:	d0034481a39af9e840702246e2ffa43e
 URL:		http://www.opensc-project.org/
 BuildRequires:	doxygen
 BuildRequires:	gnutls-devel >= 1.4
