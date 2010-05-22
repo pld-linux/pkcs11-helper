@@ -8,6 +8,8 @@ Group:		Libraries
 Source0:	http://www.opensc-project.org/files/pkcs11-helper/%{name}-%{version}.tar.bz2
 # Source0-md5:	d0034481a39af9e840702246e2ffa43e
 URL:		http://www.opensc-project.org/
+# for macros
+BuildRequires:	automake
 BuildRequires:	doxygen
 BuildRequires:	gnutls-devel >= 1.4
 BuildRequires:	nss-devel >= 3.11
@@ -15,6 +17,8 @@ BuildRequires:	openssl-devel >= 0.9.7a
 BuildRequires:	pkgconfig
 Requires:	openssl >= 0.9.7a
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%undefine	__cxx
 
 %description
 pkcs11-helper provides a simple API to access PKCS#11 tokens.
