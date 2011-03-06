@@ -1,12 +1,12 @@
 Summary:	Helper library for the use with smart cards and the PKCS#11 API
 Summary(pl.UTF-8):	Biblioteka pomocnicza do używania z kartami procesorowymi i API PKCS#11
 Name:		pkcs11-helper
-Version:	1.07
-Release:	3
+Version:	1.08
+Release:	1
 License:	GPL v2 or BSD
 Group:		Libraries
 Source0:	http://www.opensc-project.org/files/pkcs11-helper/%{name}-%{version}.tar.bz2
-# Source0-md5:	d0034481a39af9e840702246e2ffa43e
+# Source0-md5:	3ef571961c7f2ebf1f4b1230f36a524f
 URL:		http://www.opensc-project.org/
 # for macros
 BuildRequires:	automake
@@ -65,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -rf $RPM_BUILD_ROOT%{_docdir}/%{name}
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
