@@ -1,19 +1,20 @@
 Summary:	Helper library for the use with smart cards and the PKCS#11 API
 Summary(pl.UTF-8):	Biblioteka pomocnicza do używania z kartami procesorowymi i API PKCS#11
 Name:		pkcs11-helper
-Version:	1.09
-Release:	3
+Version:	1.11
+Release:	1
 License:	GPL v2 or BSD
 Group:		Libraries
-Source0:	http://www.opensc-project.org/files/pkcs11-helper/%{name}-%{version}.tar.bz2
-# Source0-md5:	88ca59143f1b1d36283cab406f33a3fa
-URL:		http://www.opensc-project.org/
+Source0:	http://downloads.sourceforge.net/opensc/%{name}-%{version}.tar.bz2
+# Source0-md5:	59f2ac76c66e4dc0c21614cc944e89fb
+URL:		https://github.com/OpenSC/OpenSC/wiki/pkcs11-helper
 # for macros
 BuildRequires:	automake
 BuildRequires:	doxygen
 BuildRequires:	gnutls-devel >= 1.4
 BuildRequires:	nss-devel >= 3.11
 BuildRequires:	openssl-devel >= 0.9.7a
+BuildRequires:	polarssl-devel
 BuildRequires:	pkgconfig
 Requires:	openssl >= 0.9.7a
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -65,6 +66,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libpkcs11-helper.la
+# packaged as %doc
 %{__rm} -r $RPM_BUILD_ROOT%{_docdir}/%{name}
 
 %clean
@@ -84,7 +88,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc doc/api/api.out/html/*
 %attr(755,root,root) %{_libdir}/libpkcs11-helper.so
-%{_libdir}/libpkcs11-helper.la
 %{_includedir}/pkcs11-helper-1.0
 %{_pkgconfigdir}/libpkcs11-helper-1.pc
 %{_aclocaldir}/pkcs11-helper-1.m4
