@@ -1,21 +1,24 @@
 Summary:	Helper library for the use with smart cards and the PKCS#11 API
 Summary(pl.UTF-8):	Biblioteka pomocnicza do używania z kartami procesorowymi i API PKCS#11
 Name:		pkcs11-helper
-Version:	1.11
-Release:	6
+Version:	1.22
+Release:	1
 License:	GPL v2 or BSD
 Group:		Libraries
-Source0:	http://downloads.sourceforge.net/opensc/%{name}-%{version}.tar.bz2
-# Source0-md5:	59f2ac76c66e4dc0c21614cc944e89fb
+#Source0Download: https://github.com/OpenSC/pkcs11-helper/releases
+Source0:	https://github.com/OpenSC/pkcs11-helper/releases/download/%{name}-%{version}/%{name}-%{version}.tar.bz2
+# Source0-md5:	c7824ef1faa357a185ae1660fb669da3
 URL:		https://github.com/OpenSC/OpenSC/wiki/pkcs11-helper
 # for macros
 BuildRequires:	automake
 BuildRequires:	doxygen
 BuildRequires:	gnutls-devel >= 1.4
+BuildRequires:	mbedtls-devel
 BuildRequires:	nss-devel >= 3.11
 BuildRequires:	openssl-devel >= 0.9.7a
-BuildRequires:	polarssl-devel
 BuildRequires:	pkgconfig
+Requires:	gnutls-libs >= 1.4
+Requires:	nss >= 3.11
 Requires:	openssl >= 0.9.7a
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,6 +53,17 @@ Static pkcs11-helper library.
 
 %description static -l pl.UTF-8
 Statyczna biblioteka pkcs11-helper.
+
+%package apidocs
+Summary:	API documentation for pkcs11-helper library
+Summary(pl.UTF-8):	Dokumentacja API biblioteki pkcs11-helper
+Group:		Documentation
+
+%description apidocs
+API documentation for pkcs11-helper library.
+
+%description apidocs -l pl.UTF-8
+Dokumentacja API biblioteki pkcs11-helper.
 
 %prep
 %setup -q
@@ -86,7 +100,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc doc/api/api.out/html/*
 %attr(755,root,root) %{_libdir}/libpkcs11-helper.so
 %{_includedir}/pkcs11-helper-1.0
 %{_pkgconfigdir}/libpkcs11-helper-1.pc
@@ -95,3 +108,7 @@ rm -rf $RPM_BUILD_ROOT
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libpkcs11-helper.a
+
+%files apidocs
+%defattr(644,root,root,755)
+%doc doc/api/api.out/html/*
