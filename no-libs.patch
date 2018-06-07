@@ -1,0 +1,8 @@
+--- pkcs11-helper-1.22/lib/libpkcs11-helper-1.pc.in~	2012-11-23 12:35:52.000000000 +0100
++++ pkcs11-helper-1.22/lib/libpkcs11-helper-1.pc.in	2018-06-07 15:46:52.398048423 +0200
+@@ -8,4 +8,4 @@ Name: pkcs11-helper
+ Description: PKCS#11 helper library
+ Version: @PACKAGE_VERSION@
+ Cflags: -I${includedir}
+-Libs: @LIBS@ -L${libdir} -lpkcs11-helper
++Libs: -L${libdir} -lpkcs11-helper
