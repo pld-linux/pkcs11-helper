@@ -1,13 +1,13 @@
 Summary:	Helper library for the use with smart cards and the PKCS#11 API
 Summary(pl.UTF-8):	Biblioteka pomocnicza do używania z kartami procesorowymi i API PKCS#11
 Name:		pkcs11-helper
-Version:	1.29.0
+Version:	1.30.0
 Release:	1
 License:	GPL v2 or BSD
 Group:		Libraries
 #Source0Download: https://github.com/OpenSC/pkcs11-helper/releases
 Source0:	https://github.com/OpenSC/pkcs11-helper/releases/download/pkcs11-helper-%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	7a65cf41d4939bbac2f3432cccbf55aa
+# Source0-md5:	f6dacff56228a6e9d5c0d417464a0d31
 Patch0:		no-libs.patch
 Patch1:		%{name}-nss.patch
 URL:		https://github.com/OpenSC/pkcs11-helper
