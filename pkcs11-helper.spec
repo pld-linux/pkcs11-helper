@@ -1,13 +1,13 @@
 Summary:	Helper library for the use with smart cards and the PKCS#11 API
 Summary(pl.UTF-8):	Biblioteka pomocnicza do używania z kartami procesorowymi i API PKCS#11
 Name:		pkcs11-helper
-Version:	1.30.0
-Release:	2
+Version:	1.31.0
+Release:	1
 License:	GPL v2 or BSD
 Group:		Libraries
 #Source0Download: https://github.com/OpenSC/pkcs11-helper/releases
 Source0:	https://github.com/OpenSC/pkcs11-helper/releases/download/pkcs11-helper-%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	f6dacff56228a6e9d5c0d417464a0d31
+# Source0-md5:	f43fd6305b765cabfed79cc8986593d7
 Patch0:		no-libs.patch
 Patch1:		%{name}-nss.patch
 URL:		https://github.com/OpenSC/pkcs11-helper
@@ -104,13 +104,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING COPYING.BSD ChangeLog README THANKS
-%attr(755,root,root) %{_libdir}/libpkcs11-helper.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libpkcs11-helper.so.1
+%{_libdir}/libpkcs11-helper.so.*.*.*
+%ghost %{_libdir}/libpkcs11-helper.so.1
 %{_mandir}/man8/pkcs11-helper-1.8*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libpkcs11-helper.so
+%{_libdir}/libpkcs11-helper.so
 %{_includedir}/pkcs11-helper-1.0
 %{_pkgconfigdir}/libpkcs11-helper-1.pc
 %{_aclocaldir}/pkcs11-helper-1.m4
